@@ -1,0 +1,5 @@
+{
+  "name": "FleetCtrl Hub",
+  "description": "A static multi-page logistics and fleet management control center.",
+  "requestFramePermissions": ["geolocation"]
+}

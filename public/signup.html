@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Sign Up | FleetCtrl</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-[#f0f2f7] flex items-center justify-center h-screen">
+  <div class="card p-8 w-full max-w-md anim anim-1">
+    <div class="flex flex-col items-center mb-8">
+      <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,#3b82f6,#1d4ed8);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#fff;margin-bottom:12px;box-shadow:0 4px 12px rgba(59,130,246,.35)">FC</div>
+      <h1 class="text-2xl font-bold text-[#0f172a]">Create Account</h1>
+      <p class="text-sm text-[#94a3b8]">Join FleetCtrl logistics hub</p>
+    </div>
+
+    <form action="dashboard.html" class="space-y-4">
+      <div>
+        <label class="form-label">Full Name</label>
+        <input type="text" class="form-input" placeholder="John Doe" required/>
+      </div>
+      <div>
+        <label class="form-label">Email Address</label>
+        <input type="email" class="form-input" placeholder="john@example.com" required/>
+      </div>
+      <div>
+        <label class="form-label">Password</label>
+        <input type="password" class="form-input" placeholder="••••••••" required/>
+      </div>
+      <button type="submit" class="btn-primary w-full justify-center py-3 mt-2">Create Account</button>
+    </form>
+
+    <div class="mt-8 pt-6 border-t border-[#f1f5f9] text-center">
+      <p class="text-sm text-[#64748b]">Already have an account? <a href="signin.html" class="text-[#3b82f6] font-bold">Sign in</a></p>
+    </div>
+  </div>
+</body>
+</html>
