@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Driver Details | FleetCtrl</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div style="display:flex;height:100vh;overflow:hidden">
+
+<!-- SIDEBAR -->
+<aside style="width:240px;flex-shrink:0;background:#0f172a;display:flex;flex-direction:column;height:100vh;border-right:1px solid rgba(255,255,255,0.1)">
+  <div style="padding:24px 20px 20px;border-bottom:1px solid rgba(255,255,255,0.1);flex-shrink:0">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#3b82f6,#1d4ed8);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:#fff;flex-shrink:0;box-shadow:0 4px 12px rgba(59,130,246,.4)">FC</div>
+      <div>
+        <div style="font-size:16px;font-weight:700;color:#f8fafc;letter-spacing:-.4px">FleetCtrl</div>
+        <div style="font-size:11px;color:#64748b;margin-top:1px">Control Center</div>
+      </div>
+    </div>
+  </div>
+  <nav style="flex:1;padding:12px 10px;overflow-y:auto">
+    <div class="nav-label">Main Menu</div>
+    <a href="dashboard.html" class="nav-link">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+      Dashboard
+    </a>
+    <a href="fleet-management.html" class="nav-link">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+      Fleet Management
+    </a>
+    <a href="tracking.html" class="nav-link">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+      Live Tracking
+    </a>
+    <a href="orders.html" class="nav-link">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2"/></svg>
+      Orders
+    </a>
+    <div class="nav-label">Staff & Logistics</div>
+    <a href="drivers.html" class="nav-link active">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+      Drivers
+    </a>
+    <a href="inventory.html" class="nav-link">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+      Inventory (Store)
+    </a>
+    <a href="invoices.html" class="nav-link">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+      Invoices
+    </a>
+  </nav>
+</aside>
+
+<!-- MAIN -->
+<div style="flex:1;display:flex;flex-direction:column;min-width:0;overflow:hidden">
+  <header style="height:60px;background:#fff;border-bottom:1px solid #e8edf5;display:flex;align-items:center;padding:0 24px;gap:16px;flex-shrink:0;box-shadow:0 1px 0 rgba(0,0,0,.03)">
+    <a href="drivers.html" style="color:#64748b;display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;text-decoration:none">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"/></svg>
+      Back to Drivers
+    </a>
+    <div style="width:1px;height:24px;background:#e2e8f0"></div>
+    <div style="font-size:15px;font-weight:700;color:#0f172a">Driver Profile: Michael Chen</div>
+  </header>
+
+  <main style="flex:1;overflow-y:auto;padding:24px;display:flex;flex-direction:column;gap:20px">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <!-- INFO CARD -->
+      <div class="lg:col-span-2 space-y-6">
+        <div class="card p-6">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px">
+            <div style="display:flex;align-items:center;gap:20px">
+              <div style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,#3b82f6,#8b5cf6);display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:700;color:#fff;box-shadow:0 4px 12px rgba(59,130,246,.3)">MC</div>
+              <div>
+                <h1 style="font-size:24px;font-weight:800;color:#0f172a;letter-spacing:-.5px">Michael Chen</h1>
+                <p style="font-size:14px;color:#64748b;margin-top:2px">Heavy Truck Specialist | 5 Years Exp.</p>
+              </div>
+            </div>
+            <span class="badge b-green">Active</span>
+          </div>
+
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div>
+              <p style="font-size:11px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em">License No.</p>
+              <p style="font-size:15px;font-weight:600;color:#1e293b;margin-top:4px">DL-KCB-8821</p>
+            </div>
+            <div>
+              <p style="font-size:11px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em">Phone</p>
+              <p style="font-size:15px;font-weight:600;color:#1e293b;margin-top:4px">+254 712 345 678</p>
+            </div>
+            <div>
+              <p style="font-size:11px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em">Total Trips</p>
+              <p style="font-size:15px;font-weight:600;color:#1e293b;margin-top:4px">1,240</p>
+            </div>
+            <div>
+              <p style="font-size:11px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em">Safety Score</p>
+              <p style="font-size:15px;font-weight:600;color:#10b981;margin-top:4px">98/100</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERFORMANCE CHARTS -->
+        <div class="card p-6">
+          <h3 style="font-size:14px;font-weight:700;color:#0f172a;margin-bottom:20px">Driving Performance</h3>
+          <div style="height:200px;background:#f8fafc;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#94a3b8;font-size:13px">
+            [Performance Chart Placeholder]
+          </div>
+        </div>
+      </div>
+
+      <!-- SIDEBAR INFO -->
+      <div class="space-y-6">
+        <!-- ASSIGNED TRUCK -->
+        <div class="card p-6">
+          <h3 style="font-size:14px;font-weight:700;color:#0f172a;margin-bottom:16px">Assigned Truck</h3>
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px">
+            <div style="width:44px;height:44px;border-radius:10px;background:#eff6ff;display:flex;align-items:center;justify-content:center;color:#3b82f6">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <div>
+              <p style="font-size:14px;font-weight:700;color:#0f172a">Volvo FH16 750</p>
+              <p style="font-size:11px;color:#94a3b8">TRK-8821 | Active</p>
+            </div>
+          </div>
+          <button class="btn-ghost w-full" onclick="location.href='truck-detail.html'">View Truck Details</button>
+        </div>
+
+        <!-- DOCUMENTS -->
+        <div class="card p-6">
+          <h3 style="font-size:14px;font-weight:700;color:#0f172a;margin-bottom:16px">Documents</h3>
+          <div class="space-y-3">
+            <div class="det-row">
+              <span style="font-size:12px;color:#64748b">License Expiry</span>
+              <span style="font-size:12px;font-weight:600;color:#0f172a">Dec 2027</span>
+            </div>
+            <div class="det-row">
+              <span style="font-size:12px;color:#64748b">Insurance</span>
+              <span style="font-size:12px;font-weight:600;color:#10b981">Valid</span>
+            </div>
+            <div class="det-row">
+              <span style="font-size:12px;color:#64748b">Medical Cert</span>
+              <span style="font-size:12px;font-weight:600;color:#10b981">Valid</span>
+            </div>
+          </div>
+          <button class="btn-primary w-full mt-4">Upload Document</button>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+</div>
+</body>
+</html>

@@ -76,7 +76,10 @@
       <input class="search-input" placeholder="Search drivers…"/>
     </div>
     <div style="margin-left:auto;display:flex;align-items:center;gap:8px">
-      <button class="btn-primary"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>Add Driver</button>
+      <div class="tab-container" style="margin-bottom:0">
+        <button class="tab-btn active" onclick="showTab('view')">View Drivers</button>
+        <button class="tab-btn" onclick="showTab('add')">Add Driver</button>
+      </div>
     </div>
   </header>
 
@@ -86,8 +89,9 @@
       <p style="font-size:12px;color:#94a3b8;margin-top:1px">Manage your team of drivers</p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 anim anim-2">
-      <div class="card p-4 flex items-center gap-4">
+    <!-- VIEW TAB -->
+    <div id="view-tab" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 anim anim-2">
+      <div class="card p-4 flex items-center gap-4 cursor-pointer hover:shadow-md transition-shadow" onclick="location.href='driver-detail.html'">
         <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#3b82f6,#8b5cf6);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;color:#fff">JD</div>
         <div style="flex:1">
           <p style="font-size:14px;font-weight:700;color:#0f172a">John Doe</p>
@@ -95,7 +99,7 @@
         </div>
         <span class="badge b-green">Active</span>
       </div>
-      <div class="card p-4 flex items-center gap-4">
+      <div class="card p-4 flex items-center gap-4 cursor-pointer hover:shadow-md transition-shadow" onclick="location.href='driver-detail.html'">
         <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#10b981,#059669);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;color:#fff">SL</div>
         <div style="flex:1">
           <p style="font-size:14px;font-weight:700;color:#0f172a">Sarah Lee</p>
@@ -104,8 +108,60 @@
         <span class="badge b-green">Active</span>
       </div>
     </div>
+
+    <!-- ADD TAB -->
+    <div id="add-tab" class="card anim anim-3 p-6" style="display:none">
+      <h2 class="text-lg font-bold mb-4">Add New Driver</h2>
+      <form class="space-y-4">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Full Name</label>
+            <input class="form-input" placeholder="e.g. John Smith"/>
+          </div>
+          <div class="form-group">
+            <label class="form-label">License Number</label>
+            <input class="form-input" placeholder="DL-XXXXXXX"/>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Specialization</label>
+            <select class="form-select">
+              <option>Heavy Truck</option>
+              <option>Light Truck</option>
+              <option>Van</option>
+              <option>Motorcycle</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Phone Number</label>
+            <input class="form-input" placeholder="+1 (555) 000-0000"/>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:flex-end;gap:12px">
+          <button type="button" class="btn-ghost" onclick="showTab('view')">Cancel</button>
+          <button type="submit" class="btn-primary">Register Driver</button>
+        </div>
+      </form>
+    </div>
   </main>
 </div>
 </div>
+
+<script>
+function showTab(tabId) {
+  document.getElementById('view-tab').style.display = tabId === 'view' ? 'grid' : 'none';
+  document.getElementById('add-tab').style.display = tabId === 'add' ? 'block' : 'none';
+  
+  const btns = document.querySelectorAll('.tab-btn');
+  btns.forEach(btn => btn.classList.remove('active'));
+  // Find the button that was clicked or the one corresponding to the tabId
+  if (event && event.target && event.target.classList.contains('tab-btn')) {
+    event.target.classList.add('active');
+  } else {
+    btns[tabId === 'view' ? 0 : 1].classList.add('active');
+  }
+}
+</script>
 </body>
 </html>

@@ -29,7 +29,10 @@ const pages = [
   'signup',
   'inventory',
   'landing',
-  'checkout'
+  'checkout',
+  'truck-detail',
+  'driver-detail',
+  'order-detail'
 ];
 
 pages.forEach(page => {
